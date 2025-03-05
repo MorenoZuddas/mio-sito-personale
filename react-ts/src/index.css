@@ -1,68 +1,175 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* ====================================================
+  RESET CSS (Rimuove margini, padding e definisce box-sizing)
+  ==================================================== */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* Resetta margini e padding predefiniti */
+*,
+*::before,
+*::after {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box; /* Garantisce che il padding e i bordi non influenzino le dimensioni */
 }
 
+/* ====================================================
+  STILE GLOBALE (Font e colori di base)
+  ==================================================== */
+
+/* Imposta il font principale per tutta l'app */
+body {
+  font-family: 'Arial', sans-serif;  /* Font generale */
+  background-color: #f5f5f5;  /* Colore di sfondo di base */
+  color: #333;  /* Colore del testo principale */
+  line-height: 1.6;  /* Altezza della linea per una migliore leggibilità */
+}
+
+/* ====================================================
+  STILE LINK (Stili per i link nel sito)
+  ==================================================== */
+
+/* Rimuove la sottolineatura dai link */
+a {
+  text-decoration: none;
+  color: inherit; /* Fa sì che il link prenda il colore del testo circostante */
+}
+
+/* Cambia colore del link al passaggio del mouse */
+a:hover {
+  color: #007bff;  /* Colore blu quando il mouse passa sopra */
+}
+
+/* ====================================================
+  STILE GENERALI PER IL LAYOUT (Classi riutilizzabili)
+  ==================================================== */
+
+/* Contenitore globale per limitare la larghezza del contenuto */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Limita la larghezza massima */
+  margin: 0 auto; /* Centra il contenuto orizzontalmente */
+  padding: 20px; /* Padding interno */
+}
+
+/* Classi per margini generali */
+.m-20 {
+  margin: 20px;  /* Aggiunge un margine di 20px su tutti i lati */
+}
+
+.m-10 {
+  margin: 10px;  /* Aggiunge un margine di 10px su tutti i lati */
+}
+
+/* Classi per padding generali */
+.p-20 {
+  padding: 20px;  /* Aggiunge padding di 20px su tutti i lati */
+}
+
+.p-10 {
+  padding: 10px;  /* Aggiunge padding di 10px su tutti i lati */
+}
+
+/* ====================================================
+  STILE DEI TITOLI (Definizione per header, h1, h2, ecc.)
+  ==================================================== */
+
+/* Stile per i titoli principali (h1) */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.5rem;  /* Grandezza del font per h1 */
+  color: #333;  /* Colore del testo */
+  margin-bottom: 20px;  /* Distanza sotto il titolo */
 }
 
-button {
+/* Stile per i titoli secondari (h2) */
+h2 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ====================================================
+  STILE DEL FOOTER (Personalizza il footer)
+  ==================================================== */
+
+/* Stile per il footer dell'app */
+footer {
+  background-color: #333;  /* Colore di sfondo scuro */
+  color: #fff;  /* Colore del testo chiaro */
+  text-align: center;  /* Centra il testo */
+  padding: 10px 0;  /* Padding sopra e sotto */
+  position: fixed;  /* Rende il footer fisso in basso */
+  width: 100%;
+  bottom: 0;
+}
+
+/* ====================================================
+  STILE PER LE IMMAGINI (Definisci comportamento delle immagini)
+  ==================================================== */
+
+/* Stile per rendere le immagini responsive */
+img {
+  max-width: 100%; /* Le immagini non superano mai la larghezza del contenitore */
+  height: auto;  /* Mantiene le proporzioni */
+}
+
+/* ====================================================
+  STILE DEI MODALI (Se desideri usare modali)
+  ==================================================== */
+
+/* Stile base per un modal */
+.modal {
+  position: fixed; /* Rende il modal fisso sopra il contenuto */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Sovrapposizione semi-trasparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenuto del modal */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  width: 80%;
+  max-width: 600px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* ====================================================
+  STILI PER LA NAVBAR (Se hai una barra di navigazione)
+  ==================================================== */
+
+/* Stile per la barra di navigazione */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Link nella navbar */
+.navbar a {
+  color: #fff;
+  margin: 0 15px;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  color: #007bff;  /* Colore hover dei link */
+}
+
+/* ====================================================
+  MEDIA QUERIES (Per rendere il sito responsive)
+  ==================================================== */
+
+/* Stili per schermi più piccoli */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Riduce la dimensione del testo su schermi più piccoli */
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+
+  .container {
+    padding: 10px; /* Riduce il padding sul contenitore */
   }
 }

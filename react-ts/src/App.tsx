@@ -1,14 +1,17 @@
+// src/App.tsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Header from "./components/Header/Header.tsx";
+import About from "./pages/About/About";  // Importa la nuova pagina
+import NavBar from "./components/NavBar/NavBar";  // Importa il componente NavBar
 
 const App = () => {
     return (
         <Router>
-            <Header />
+            <NavBar />  {/* Aggiungi la NavBar */}
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home />} />      {/* Rotta per la Home */}
+                <Route path="/about" element={<About />} /> {/* Rotta per la pagina Chi Siamo */}
             </Routes>
         </Router>
     );
