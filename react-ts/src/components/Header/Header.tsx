@@ -1,13 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "./Header.scss";
 
 const Header = () => {
     return (
-        <header>
+        <header className="header">
             <h1>Benvenuto nel mio sito!</h1>
-            <nav>
-                <Link to="/">Home</Link>
-            </nav>
         </header>
     );
 };
