@@ -83,7 +83,7 @@ mio-sito-personale/
 - **public/**: Contiene il file `index.html` e altri asset statici che possono essere richiesti dal browser.
 - **src/assets/**: Una cartella dove caricherai immagini, video o altri file statici.
 - **src/components/**: Contiene i componenti riutilizzabili, come il `Header`, `Footer`, e qualsiasi altro componente condiviso tra le pagine.
-- **src/pages/**: Contiene le pagine principali del sito, ad esempio `Home.tsx`, `About.tsx`.
+- **src/pages/**: Contiene le pagine principali del sito, ad esempio `home.tsx`, `about.tsx`.
 - **src/styles/**: Contiene gli stili globali, SCSS e mixin.
 - **src/App.tsx**: Il componente principale dove sono definiti i routing e i componenti.
 - **src/index.tsx**: Il punto di ingresso dell'applicazione React.

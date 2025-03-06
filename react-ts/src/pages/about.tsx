@@ -1,6 +1,6 @@
-// src/pages/About/About.tsx
+// src/pages/About/about.tsx
 import React from "react";
-import "./About.scss";
+import "../styles/pages/_about.scss";
 
 const About = () => {
     return (

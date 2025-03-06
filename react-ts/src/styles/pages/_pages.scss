@@ -1,0 +1,19 @@
+@import "../_mixins.scss";
+
+.home {
+  text-align: center;
+  padding: 20px;
+
+  @include respond-to(mobile) {
+    padding: 10px;
+  }
+}
+
+.about {
+  text-align: left;
+  padding: 20px;
+
+  @include respond-to(mobile) {
+    padding: 10px;
+  }
+}

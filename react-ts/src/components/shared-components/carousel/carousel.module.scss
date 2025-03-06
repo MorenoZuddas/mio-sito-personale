@@ -1,0 +1,13 @@
+.carousel-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+}
