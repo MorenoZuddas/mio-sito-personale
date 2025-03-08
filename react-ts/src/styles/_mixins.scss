@@ -1,17 +1,46 @@
-// 📱 Media Query mixin
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == mobile {
-    @media (max-width: 576px) { @content; }
-  } @else if $breakpoint == tablet {
-    @media (max-width: 768px) { @content; }
-  } @else if $breakpoint == desktop {
-    @media (min-width: 1024px) { @content; }
+/* _mixins.scss */
+
+// 📱 Media Query Mixins
+@mixin breakpoint($width) {
+  @media screen and (max-width: $width) {
+    @content;
   }
 }
 
-// 🔄 Flexbox mixin
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@mixin breakpoint-max($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-minmax($min_width, $max_width) {
+  @media screen and (min-width: $min_width) and (max-width: $max_width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-phone() {
+  @include breakpoint-min($s);
+}
+
+@mixin breakpoint-tablet() {
+  @include breakpoint-min($md);
+}
+
+@mixin breakpoint-big-tablet() {
+  @include breakpoint-min($lg);
+}
+
+@mixin breakpoint-desktop() {
+  @include breakpoint-min($xl);
+}
+
+@mixin breakpoint-big-desktop() {
+  @include breakpoint-min($xxl);
 }

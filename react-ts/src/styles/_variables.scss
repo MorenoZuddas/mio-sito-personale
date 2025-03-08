@@ -1,11 +1,19 @@
+/* _variables.scss */
 
-// 🎨 Palette colori
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$background-color: #f8f9fa;
+// 📏 Breakpoints
+$s: 576px;   // Small (smartphone)
+$md: 768px;  // Medium (tablet)
+$lg: 992px;  // Large (big tablet/small laptop)
+$xl: 1200px; // Extra Large (desktop)
+$xxl: 1400px; // Extra Extra Large (large desktop)
+
+// 🎨 Colors
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
 $text-color: #333;
+$background-color: #f5f5f5;
 
-// 📏 Breakpoints per il Mobile First
-$breakpoint-mobile: 576px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
+// 📏 Spacing
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
